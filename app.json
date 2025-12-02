@@ -9,6 +9,7 @@
     "bun",
     "grammy"
   ],
+  "stack": "container",
   "env": {
     "BOT_TOKEN": {
       "description": "Your Telegram bot token from @BotFather.",
