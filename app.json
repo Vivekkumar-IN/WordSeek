@@ -1,0 +1,26 @@
+{
+  "name": "WordSeek",
+  "description": "A Wordle-inspired word guessing game for Telegram built with Bun.js and grammY.",
+  "keywords": [
+    "telegram",
+    "bot",
+    "wordle",
+    "game",
+    "bun",
+    "grammy"
+  ],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Telegram bot token from @BotFather.",
+      "required": true
+    },
+    "NODE_ENV": {
+      "description": "The environment mode for the application.",
+      "value": "production"
+    }
+  },
+  "addons": [
+    "heroku-postgresql",
+    "heroku-redis"
+  ]
+}

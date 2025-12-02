@@ -1,5 +1,10 @@
 import { z } from "zod";
 
+const envSource = {
+  ...process.env,
+  REDIS_URI: process.env.REDIS_URL || process.env.REDIS_URI,
+};
+
 export const env = z
   .object({
     BOT_TOKEN: z.string().min(1, { message: "BOT_TOKEN is required" }),
@@ -34,4 +39,4 @@ export const env = z
       .optional()
       .default([]),
   })
-  .parse(process.env);
+  .parse(envSource);
